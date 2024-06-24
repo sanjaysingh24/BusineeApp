@@ -2,20 +2,20 @@ import { View, Text,FlatList,Image, TouchableOpacity, Share } from 'react-native
 import React from 'react'
 import {Colors} from '../../constants/Colors'
 import { useRouter } from 'expo-router'
-import { SignedOut, useAuth } from '@clerk/clerk-expo';
+import {useAuth } from '@clerk/clerk-expo';
 
 export default function  Menulist() {
-const{SignedOut}  = useAuth();
+const{signOut}  = useAuth();
 
   const router  = useRouter();
   const onMenuClick  = (item)=>{
     if(item.path==='logout'){
-      SignedOut();
+      signOut();
       return ;
     }
     if(item.path==='share'){
       Share.share({
-        message: businessdetail?.name + '\nAddress: ' + businessdetail.address + '\nFind more details on Business Directory',
+        message:'Find more details on Business Directory download the business directory'
       });
       return;
     }
