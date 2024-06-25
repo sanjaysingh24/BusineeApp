@@ -48,6 +48,7 @@ const categoryhandler =(category)=>{
 <View style={{paddingLeft:20}}>
     
 <FlatList
+      nestedScrollEnabled
       data={categorylist}
       horizontal={true}
       showsHorizontalScrollIndicator={false}

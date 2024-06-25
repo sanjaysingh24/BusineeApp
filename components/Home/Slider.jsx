@@ -30,6 +30,7 @@ const[sliderList,setsliderList] = useState([])
       <Text style={{fontSize:20,paddingBottom:20,fontWeight:'bold'}}># Special for you</Text>
       <FlatList
       data={sliderList}
+      nestedScrollEnabled
       horizontal={true}
       showsHorizontalScrollIndicator={false}
       renderItem={({ item }) => (

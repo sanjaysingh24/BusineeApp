@@ -41,7 +41,7 @@ export default function Intro({businessdetail}) {
         </View>
         <Image source = {{uri:businessdetail.Imageurl}} style={{width:'100%', height:300} }/>
         <View style={{display:'flex',flexDirection:'row',backgroundColor:'#fff',justifyContent:'space-between',borderTopLeftRadius:25,borderTopRightRadius:25, marginTop:-20,padding:20}}>
-      <View style={{padding:20,marginTop:-20,backgroundColor:"#fff",borderTopLeftRadius:25,borderTopRightRadius:25}}>
+      <View style={{padding:20,paddingLeft:0,marginTop:-20,backgroundColor:"#fff",borderTopLeftRadius:25,borderTopRightRadius:25}}>
         <Text style ={{fontSize:26,fontWeight:'bold' }}>{businessdetail.name}  </Text>
    <Text style={{fontSize:18}}>{businessdetail.address}</Text>
       </View>

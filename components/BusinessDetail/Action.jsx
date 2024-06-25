@@ -37,9 +37,10 @@ const actionbuttonmenu = [
 ]
 
   return (
-    <View style = {{backgroundColor:'#fff',padding:20,paddingTop:0}}>
+    <View style = {{backgroundColor:'#fff',paddingTop:0 ,display:'flex', flexDirection:'row',alignItems:'center', justifyContent:'space-between'}}>
 
-      <FlatList
+      {/* <FlatList
+        nestedScrollEnabled
         data = {actionbuttonmenu}
         numColumns={4}
         columnWrapperStyle={{justifyContent: 'space-between'}}
@@ -49,7 +50,13 @@ const actionbuttonmenu = [
               <Text style={{fontWeight:600,textAlign:'center' ,marginTop:5}}>{item?.name}</Text>
 </TouchableOpacity>       
   )}
-/>
+/> */}
+ {actionbuttonmenu.map((item, index) => (
+          <TouchableOpacity key={index} onPress={() => openonpresshandler(item)} style={{ width: '24%', marginBottom: 10, display:'flex',alignItems:'center',justifyContent:'space-between' }}>
+            <Image source={item?.icon} style={{ width: 50, height: 50 }} />
+            <Text style={{ fontWeight: '600', marginTop: 5 }}>{item?.name}</Text>
+          </TouchableOpacity>
+        ))}
     </View>
   )
 }

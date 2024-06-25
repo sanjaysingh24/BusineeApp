@@ -4,8 +4,9 @@ import BusinessListCart from './BusinessListCart'
 
 export default function Explorebusinesslist({businesslist}) {
   return (
-    <ScrollView>
+    <View>
       <FlatList data = {businesslist}
+      nestedScrollEnabled
       scrollEnabled
       showsVerticalScrollIndicator={false}
       renderItem={({item,index})=>(
@@ -18,6 +19,6 @@ export default function Explorebusinesslist({businesslist}) {
       <View style ={{height:400}}>
 
       </View>
-    </ScrollView>
+    </View>
   )
 }

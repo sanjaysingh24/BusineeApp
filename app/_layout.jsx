@@ -4,6 +4,7 @@ import { Text } from "react-native";
 import { ClerkProvider,SignedIn, SignedOut } from "@clerk/clerk-expo";
 import LoginScreen from './../components/LoginScreen'
 import * as SecureStore from "expo-secure-store";
+import { NavigationContainer } from "@react-navigation/native";
 
 const tokenCache = {
   async getToken(key) {
@@ -28,6 +29,7 @@ export default function RootLayout() {
   //   'outfit':require('./../assets/fonts/Outfit-Regular.ttf')
   // })
   return (
+   
     <ClerkProvider tokenCache ={tokenCache} publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}>
 
       <SignedIn>
@@ -41,5 +43,6 @@ export default function RootLayout() {
   
     </SignedOut>
     </ClerkProvider>
+
   );
 }
