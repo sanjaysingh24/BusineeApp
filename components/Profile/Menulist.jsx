@@ -26,13 +26,13 @@ const{signOut}  = useAuth();
             id:1,
             name:'Add business',
             icon:require('./../../assets/images/Add.png'),
-            path:'/business/add-business'
+            path:'/business/add-business/'
         }, 
         {
             id:2,
             name:'My business',
             icon:require('./../../assets/images/building.png'),
-            path:'/business/my-business'
+            path:'/business/my-business/'
         },
         {
             id:3,
